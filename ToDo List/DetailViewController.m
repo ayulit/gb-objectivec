@@ -12,9 +12,12 @@
 // properties
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+// methods declaration
+- (IBAction)buttonAction:(id)sender;
 
 @end
 
+// methods implementation
 @implementation DetailViewController
 
 - (void)viewDidLoad {
@@ -29,4 +32,6 @@
 }
 
 
+- (IBAction)buttonAction:(id)sender {
+}
 @end
