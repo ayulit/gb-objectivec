@@ -33,5 +33,6 @@
 
 
 - (IBAction)buttonAction:(id)sender {
+    NSLog(@"Button Action"); // just prints to console
 }
 @end
