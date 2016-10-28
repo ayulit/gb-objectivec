@@ -8,7 +8,8 @@
 
 #import "DetailViewController.h"
 
-@interface DetailViewController ()
+// We've subsribed on protocol UITextFieldDelegate
+@interface DetailViewController ()<UITextFieldDelegate>
 // properties
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
@@ -44,5 +45,19 @@
 
 }
 
+// what if user presses button Return
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+
+    // we need OUR text field
+    if ([textField isEqual:self.textField]) {
+        
+        // calling of metod of object textField
+        // resignFirstResponder method closes keyboard on screen
+        [self.textField resignFirstResponder];
+        
+    }
+    
+    return YES;
+}
 
 @end
