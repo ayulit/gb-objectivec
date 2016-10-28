@@ -32,12 +32,30 @@
     // Method will be run when event happens
     // event will be UIControlEventTouchUpInside - touch and release button - all is simple!
     [self.buttonSave addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
+
+    UITapGestureRecognizer * handleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleEndEditing)];
+    
+    // we need to add gesture on our view
+    [self.view addGestureRecognizer:handleTap];
+
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) handleEndEditing {
+    
+    // calling of metod of object textField
+    // resignFirstResponder method closes keyboard on screen
+    
+    //[self.textField resignFirstResponder]; // this will close keyboard for only our textField
+    
+    // this will work for all text fields
+    [self.view endEditing:YES];
+
 }
 
 - (void) save {
