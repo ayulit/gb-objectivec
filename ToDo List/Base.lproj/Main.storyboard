@@ -32,15 +32,13 @@
                                 <frame key="frameInset" minX="147" minY="568" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Сохранить"/>
-                                <connections>
-                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xtw-2u-VIN"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="dFt-C1-o2i"/>
                     <connections>
+                        <outlet property="buttonSave" destination="5vL-ba-vJ7" id="KOI-Pr-jYJ"/>
                         <outlet property="datePicker" destination="zGO-am-N36" id="1qB-Zh-sKU"/>
                         <outlet property="textField" destination="g6R-zY-SrT" id="QPM-zS-Juq"/>
                     </connections>
